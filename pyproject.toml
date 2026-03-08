@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smolagents-kya"
+version = "0.1.0"
+description = "KYA (Know Your Agent) identity verification for HuggingFace smolagents"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [
+    {name = "LuciferForge", email = "LuciferForge@proton.me"},
+]
+keywords = ["smolagents", "kya", "agent-identity", "know-your-agent", "ai-safety", "verification", "huggingface"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "kya-agent>=0.2.0",
+]
+
+[project.optional-dependencies]
+signing = ["cryptography>=41.0"]
+dev = ["pytest>=7.0", "smolagents>=1.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/LuciferForge/smolagents-kya"
+Repository = "https://github.com/LuciferForge/smolagents-kya"
+Issues = "https://github.com/LuciferForge/smolagents-kya/issues"
+
+[tool.setuptools.packages.find]
+include = ["smolagents_kya*"]
